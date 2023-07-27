@@ -1,0 +1,5 @@
+pytest~=7.4.0
+
+
+selene~=2.0.0rc1
+selenium~=4.10.0
