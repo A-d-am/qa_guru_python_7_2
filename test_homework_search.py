@@ -1,8 +1,8 @@
 from selene import browser
 from selene import be, have
-from selenium import webdriver
 
 browser.config.driver_name = 'firefox'
+
 
 def test_search_yashaka_github(set_browser_resolution):
     browser.open('https://google.com')
