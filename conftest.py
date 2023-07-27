@@ -1,11 +1,12 @@
 import pytest
-from selene import browser
+from selene.support.shared import browser
 
 
 @pytest.fixture
-def set_browser_resolution():
-    # browser.config.window_width("1233")
-    # browser.config.window_height("1233")
-    pass
-
-
+def open_firefox_with_given_resolution():
+    browser.config.window_width = 1400
+    browser.config.window_height = 1600
+    browser.config.browser_name = 'firefox'
+    browser.config.base_url = "https://google.com"
+    yield
+    browser.quit()
