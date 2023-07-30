@@ -13,3 +13,4 @@ def test_googl_search_stub(open_firefox_with_given_resolution):
     input_text = 'iausdfhgoidsygfhisuadyfgdsakuyfgdsaukyfgdsaukfyasgduf'
     browser.element('[type="search"]').type(input_text).press_enter()
     browser.element('[class="card-section"]').should(have.text(f'По запросу {input_text} ничего не найдено.'))
+
